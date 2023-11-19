@@ -10,7 +10,7 @@ const io = require("socket.io")(http, {
 console.log("\n----------- Server Started -----------------\n");
 
 app.get("/", function (req, res) {
-    res.sendFile(__dirname + "/index.html")
+    res.json({message: "Hello from socket server"})
 })
 
 io.on('connection', (socket) => {
