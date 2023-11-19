@@ -1,7 +1,7 @@
-const SOCKET_SERVER_PORT = 8000
 const express = require("express")
 const app = express()
 const http = require("http").Server(app)
+const SOCKET_SERVER_PORT = process.env.PORT || 8000
 const io = require("socket.io")(http, {
     cors: ["*"]
 })
